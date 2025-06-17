@@ -42,6 +42,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /home/ubuntu/ciCd
+            git reset --hard
             git pull origin main
             npm install --production 
             npm install --save-dev @types/node
